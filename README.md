@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Login crendential / Register your own
 
-- Username: testing@123
+- Username: test@123
 - Password: test
 
 ## My process
