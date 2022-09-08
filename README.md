@@ -28,7 +28,11 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
-![](link)
+![Login](SS/login.png)
+![Register](SS/register.png)
+![Homepage](SS/index.png)
+![Cashier](SS/cashier.png)
+![Barista](SS/barista.png)
 
 ### Links
 - Solution URL: [https://github.com/xuwil1/CoffeeCo]
