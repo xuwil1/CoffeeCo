@@ -54,3 +54,17 @@ This is a full stack application with authorization. This application helped me 
 
 ### Continued development
 Add more forms of authorization such as OAuth so users can use Google to log in. 
+## Available Scripts
+
+### How to run this app. 
+
+In this repository, it contains a .env.example file. Create a .env file. Create a 'DATABASE_URL' variable equal to your MongoDB key and a 'SESSION_SECRET' variable equal to anything you want.
+## `npm install`
+Run this to install all dependencies required for the application.
+## `npm run dev`
+Run this to start application in dev mode with nodemon.
+
+## Author
+
+- Website - [Willie Xu](https://xuwil1.github.io/Portfolio/)
+
