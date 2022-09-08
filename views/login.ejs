@@ -1,10 +1,16 @@
-<h2> Login </h2>
-<form action="/login" method="POST">
-    <input type="email" placeholder="email" required>
-    <input type="password" placeholder="password" required>
-    <button  type="submit">Login</button>
-</form>
-<br>
-<span> Create an account <a href="/register">here</a>.<span>
-<br>
-<span> Login as tester <a href="#">here</a>.<span>
+<div class="auth-container">
+    <div class="border-container">
+        <h2> Login </h2>
+        <form action="/login" method="POST">
+            <div class="row row-1 login-row">
+                <input type="email" name="email" placeholder="email" required>
+            </div>
+            <div class="row row-3 login-row">
+                <input type="password" name="password" placeholder="password" required>
+            </div>
+            <button class="btn btn-auth" type="submit">Login</button>
+            <span class="auth-span"> Create an account <a href="/register">here</a>!<span>
+        </form>
+    </div>
+</div>
+

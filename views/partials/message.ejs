@@ -1,0 +1,18 @@
+
+<% if(success_msg != ''){ %>
+    <div class="hide hide-successMsg">
+        <%= success_msg %>
+    </div>
+<% } %>
+
+<% if(error_msg != ''){ %>
+    <div class="hide hide-errorMsg">
+        <%= error_msg %>
+    </div>
+<% } %>
+<% if(locals.errorMessage != null){ %>
+    <div class="hide hide-errorMsg">
+    <%= errorMessage %>
+    </div>
+<% } %>
+

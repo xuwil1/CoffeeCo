@@ -1,0 +1,34 @@
+.hide {
+    display: flex;
+    justify-content: center;
+
+    /* Firefox */
+    -moz-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Safari and Chrome */
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Opera */
+    -o-animation: cssAnimation 0s ease-in 3s forwards;
+    animation: cssAnimation 0s ease-in 3s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.hide-successMsg{
+    color: var(--color-success);
+}
+.hide-errorMsg {
+    color: var(--color-btn-del);
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}

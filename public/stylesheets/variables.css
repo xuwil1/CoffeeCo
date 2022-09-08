@@ -1,0 +1,17 @@
+:root{
+    --color-base-hue: 30;
+    --color-color-opposite: calc(var(--color-base-hue) - 180);
+    
+    --color-dark: hsl(var(--color-base-hue), 100% , 15%);
+    --color-mid: hsl(var(--color-base-hue), 100% , 20%);
+    --color-light: hsl(var(--color-base-hue), 100%, 80%);
+    --color-lighter: hsl(var(--color-base-hue), 100%, 85%);
+
+    --color-mid-hover: hsl(var(--color-base-hue), 100% , 25%);
+
+    --color-btn-opposite-light: hsl(var(--color-color-opposite), 100%, 83%);
+    
+    --color-btn-del: hsl(0,100%,45%);
+    --color-btn-del-hover: hsl(0,100%,65%);
+    --color-success: hsl(120,100%,50%);
+}

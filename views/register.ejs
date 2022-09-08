@@ -1,10 +1,20 @@
-<h2>Register</h2>
-<form action="/register" method="POST">
-    <input type="text" placeholder="first name" required>
-    <input type="text" placeholder="last name">
-    <input type="email" placeholder="email" required>
-    <input type="password" placeholder="password" required>
-    <input type="password" placeholder="password" required>
-    <button type="submit"> Register</button>
-</form>
-<span> Already have an account? Click <a href="/register">here</a>!<span>
+<div class="auth-container">
+    <div class="border-container">
+        <h2>Register</h2>
+        <form action="/register" method="POST">
+            <div class="row row-1">
+                <input type="text" name="firstName" placeholder="first name" value="<%= typeof firstName != 'undefined' ? firstName : '' %>" required>
+                <input type="text" name="lastName" placeholder="last name" value="<%= typeof lastName != 'undefined' ? lastName : '' %>" required>
+            </div>
+            <div class="row row-2">
+                <input type="email" name="email" placeholder="email" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+            </div>
+            <div class="row row-3">
+                <input type="password" name="password" placeholder="password" required>
+                <input type="password" name="password2" placeholder="password" required>
+            </div>
+            <button class="btn btn-auth" type="submit"> Register</button>
+            <span class="auth-span"> Already have an account? Click <a href="/login">here</a>!<span>
+        </form>
+    </div>
+</div>

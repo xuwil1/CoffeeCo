@@ -1,0 +1,58 @@
+<%- include('../partials/nav') %>
+<h2> Cashier</h2>
+<div class="container container1 cashier">
+    <form action="/cashier" method="POST">
+        <p>Coffee Type:</p>
+        <label><input type="radio" name="coffeeType" value="black" required>Black</label>
+        <br>
+        <label><input type="radio" name="coffeeType" value="latte">Latte</label>
+        <br>
+        <label><input type="radio" name="coffeeType" value="cappucino">Cappucino</label>
+        <br>
+        <label><input type="radio" name="coffeeType" value="americano">Americano</label>
+        <br>
+        <label><input type="radio" name="coffeeType" value="espresso">Espresso</label>
+        <br><label>Number<input type="number" name="number" value="1" min="0" required></label>
+        <p>Size:</p>
+        <label><input type="radio" name="size" value="small" required>Small</label>
+        <label><input type="radio" name="size" value="medium" checked>Medium</label>
+        <label><input type="radio" name="size" value="large">Large</label>
+        <p>Ice amount:</p>
+        <label><input type="radio" name="iceAmount" value="noIce" checked>No Ice</label>
+        <label><input type="radio" name="iceAmount" value="lightIce" required>Light Ice</label>
+        <label><input type="radio" name="iceAmount" value="Ice">Ice</label>
+        <label><input type="radio" name="iceAmount" value="extraIce">Extra Ice</label>
+        <p>Additiona Requests:</p>
+        <input type="text" name="additional" placeholder="Additional requests">
+        <button class="btn-action" type="submit">Order</button>
+    </form>
+</div>
+<div class="container container2 cashier">
+    <div class="order">
+        <p>Current Order:</p>
+        <h2>Order #<%= orderNumber %></h2>
+        <ul>
+            <% coffees.forEach(coffee=>{ %>
+                <li>
+                    <div class="orderRow">
+                        <div class="row1">
+                            <%- include('../partials/order',{coffee}) %>
+                        </div>
+                        <div class="row2">
+                            <form action="/cashier/<%= coffee.id %>?_method=DELETE" method="POST">
+                                <button class="btn-delete" type="submit">Delete</button>
+                            </form> 
+                        </div>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+
+        <% if(coffees.length>0){ %>
+            <form action="/checkout" method="POST">
+                <label>Customer Name:<input type="text" name="custName" required>
+                <button class="btn-action" type="submit">Checkout</button>
+            </form>
+        <% } %>
+    </div>
+</div>

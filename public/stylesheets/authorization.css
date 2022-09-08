@@ -1,0 +1,65 @@
+.auth-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+.border-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 80%;
+    height: 30%;
+    max-height: 500px;
+    max-width: 600px;
+
+}
+.row{
+    display: grid;
+    grid-template-areas:
+    "name name"
+    "email email" 
+    "password password";
+    margin-top: 1%;
+}
+.row-1{
+    grid-area: name;
+}
+.row-2{
+    grid-area: email;
+}
+.row-2>input{
+    width: 133.5%;
+}
+.row-3{
+    grid-area: password;
+}
+.login-row{
+    display: grid;
+    grid-template-areas:
+    "email" 
+    "password";
+    width: 70vw;
+    max-width: 500px;
+
+}
+.btn-auth{
+    display: block;
+    margin: 1% auto;
+    color: black;
+    background-color: var(--color-lighter);
+}
+.btn-auth:hover{
+    background-color: var(--color-mid);
+}
+.auth-span{
+    margin-left: 0;
+}
+.auth-span a:hover{
+    color: var(--color-btn-opposite-light);
+}

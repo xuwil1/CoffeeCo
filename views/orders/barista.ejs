@@ -1,0 +1,52 @@
+<%- include('../partials/nav') %>
+
+<h2>Barista</h2>
+
+<div class="search">
+    <form action="/barista" method="GET">
+        <label>Order
+                <div class="searchRow">
+                <div class="searchRow1">
+
+                    <input id="orderSearch" type="number" name="number" value="<%= searchOptions.number %>" ></label>
+                </div>
+                <div class="searchRow2">
+
+                    <button class="btn-search" type="submit"> Search</button>
+                </div>
+        </div>
+    </form>
+</div>
+<div class="orders">
+    <% orders.forEach(order=>{ %>
+        <div class="barista-order">
+        <div class="<%= order.barista ? 'crossOut' : '' %>">
+        Order# <%= order.number %><br>
+        Name: <%= order.custName %><br>
+        Time: <%= order.date.toISOString().split('T')[0] %> <%= order.date.toISOString().split('T')[1].split('.')[0] %><br>
+        Cashier: <%= order.cashier %><br>
+        Orders:<br>
+        <% let test= coffees.forEach(cof=>{ %> 
+            <% order.order.forEach(coffeeId=>{ %>
+                <% if(cof.id == coffeeId){ %>
+                    <%- include('../partials/order',{coffee: cof}) %>
+                <% } %>
+            <% }) %>
+        <% }) %>
+        ITEMS SOLD <%=order.order.length %> <br>
+    </div>
+    <% if(order.completed) { %>
+        Order completed by: <%= order.barista %><br>
+     <% } %>
+        <form action="/barista/<%= order.id %>?_method=PUT" method="POST">
+            <button class="btn-action" type="submit">
+                <%= order.completed ? 'Uncomplete Order' : 'Complete Order' %>
+            </button>
+        </form>
+
+        <form action="/barista/<%= order.id %>?_method=DELETE" method="POST">
+            <button class="btn-delete" type="submit">Delete</button>
+        </form>
+    </div>
+    <% }) %>
+</div>

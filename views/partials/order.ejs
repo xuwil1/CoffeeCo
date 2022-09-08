@@ -1,0 +1,8 @@
+(<%= coffee.number %>) <%= coffee.size %> <%= coffee.coffeeType %><br/>
+<%= coffee.iceAmount == 'noIce' ? 'No ice'
+: coffee.iceAmount == 'lightIce' ? 'Light ice'
+: coffee.iceAmount == 'Ice' ? 'Regular ice'
+: 'Extra ice' %><br/>
+<% if(coffee.additional && coffee.additional != ''){ %>
+        <%= coffee.additional %><br>
+<% } %>

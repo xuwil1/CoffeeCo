@@ -1,0 +1,163 @@
+@import 'authorization.css';
+@import 'variables.css';
+@import 'errorMessage.css';
+
+*, *::before,*::after{
+    box-sizing: border-box;
+    background: var(--color-dark);
+    color: var(--color-light);
+}
+input{
+    background-color: var(--color-light);
+    color: black;
+}
+body{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 1%;
+    border-bottom: 1px solid var(--color-light);
+}
+nav>ul{
+    display: flex;
+    justify-content: space-around;
+    width: 440px;
+}
+nav>ul>li{
+    list-style: none;
+}
+nav a:link{
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: var(--color-mid-hover);
+    color: var(--color-btn-opposite-light);
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+}
+.container{
+    display: flex;   
+}
+.container1{
+    float: left;
+    width: 50%;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+.container1>form{
+    display: block;
+    margin: 0 auto;
+}
+.container2{
+    float: right;
+    width: 50%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.order{
+    padding: 0 5%;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+.center> a{
+    border: 1px solid var(--color-light);
+    border-radius: 25px;
+    padding: 200px;
+    background: var(--color-mid);
+}
+.center> a:hover{
+    background: var(--color-mid-hover);
+}
+/* ------------------cashier--------------------- */
+.order{
+    border: 1px solid var(--color-light);
+    border-radius: 25px;
+    max-width: 450px;
+    width: auto;
+}
+.orderRow{
+    display: flex;
+}
+.row1{
+    float: left;
+    width: 50%;
+}
+.row2{
+    float: right;
+    width: 50%;
+}
+/* ------------------barista--------------------- */
+.search{
+    display: flex;
+    justify-content: center;
+}
+.search>form{
+    border: 1px solid var(--color-light);
+    min-height: 25px;
+    padding-bottom: 1%;
+    width: 50%;
+}
+.searchRow{
+    display: flex;
+    justify-content: center;
+}
+.searchRow1{
+    float: left;
+    width: 80%;
+}
+.searchRow1 input{
+    width: 100%;
+}
+
+.barista-order{
+    margin-top: 1%;
+    border-bottom: 3px solid black;
+    padding: 1% 10%;
+}
+.crossOut{
+    text-decoration: line-through;
+    color: gray;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    border-color: var(--color-light);
+}
+.btn-delete{
+    background-color: var(--color-btn-del);
+}
+.btn-delete:hover{
+    background-color: var(--color-btn-del-hover);
+    color: black;
+}
+.btn-action{
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+.btn-action:hover{
+    background-color: var(--color-mid);
+    color: var(--color-lighter);
+}
+.btn-search{
+    background-color: var(--color-mid-hover);
+}
+.btn-search:hover{
+    background-color: var(--color-btn-opposite-light);
+    color: var(--color-lighter);
+}
+
